@@ -14,7 +14,8 @@
             <td><%= list.name%></td>
             <td><%= list.description%></td>
             <td><%= link_to "Edit", edit_todo_path(list)%> |
-            <td><%= link_to "Show", todo_path(list)%>
+            <td><%= link_to "Show", todo_path(list)%> |
+            <td><%= link_to "Delete", todo_path(list), method: :delete, data: {confirm: "Are you surte?"}%></td>
         </tr>
     <% end %>
 </table>
